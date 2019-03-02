@@ -1,0 +1,57 @@
+/*RESETS*/
+main, body, footer, nav, p, section, div, a, span, header {
+  font-size: 12px;
+  box-sizing: border-box;
+}
+
+* {
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid black;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;      /*Remove this for production*/
+  padding: 0;     /*Remove this for production*/
+}
+
+li {
+  list-style-type: none;
+  display: inline-block;
+}
+
+/*Structures the body to be a flex box to create a fixed header*/
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*Common properties for the main page elements*/
+.header, .main, .footer {
+  width: 85%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: rgb(200,200,200);
+}
+
+.main {
+  flex: 1;          /*Allows main to take up the available space*/
+
+  overflow: auto;   /*Allows for scrolling*/
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+}
+
+.footer__group {
+  width: 35%;
+}
