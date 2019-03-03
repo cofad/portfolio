@@ -8,36 +8,97 @@
   <body>
 
     <header class="header">
-      <ul class="header__group header_group--first">
-        <li><a href="index.html">Picture</a></li>
-        <li>Will R. Warner</li>
+      <ul class="header__group header__group--first">
+        <li class="header__list-item"><a class="header__list-link" href="index.html"><img src="img/wrw-logo.png" alt="logo"></a></li>
       </ul>
 
       <ul class="header__group header__group--last">
-        <li>About</li>
-        <li>Projects</li>
-        <li><a href="#">Linked In</a></li>
-        <li><a href="#">Git Hub</a></li>
-        <li><a href="#">Contact</a></li>
+        <li class="header__list-item">Home</li>
+        <li class="header__list-item">Projects</li>
+        <li class="header__list-item"><a class="header__list-link" href="#">Linked In</a></li>
+        <li class="header__list-item"><a class="header__list-link" href="#">Git Hub</a></li>
+        <li class="header__list-item"><a class="header__list-link" href="#">Contact</a></li>
       </ul>
     </header>
 
     <main class="main">
-      <div class="main__group">
-        Projects
-      </div>
-    </main>
+      <div class="main__main-group">
+        <h1>Front End Developer</h1>
+        <h2>William R. Warner</h2>
 
-    <footer class="footer">
-      <div class="footer__group">
-        <span>About Me<span>
+        <p>Hi, I'm a front end developer located in Memphis, TN. My background is in Mechanical Engineering, but recently I developed an interest in web development. I was able to gain some knowledge through the Tech901 web programming course, and now I'm seeking to use those skills in the real world!</p>
+
+        <p>Here's a link to my <a href="docs/William_Warner_Resume_20181222.pdf" target="_blank">resume</a> to get a complete history of my work experience. My resume will help to highlight my experience in a professional setting, while the projects section of this page will show off my web development skills.</p>
+
+        <h2>Skills and Design Philosophy</h2>
+        <p>Some of the web developments skills I've studied are:</p>
+
+        <ul class="main-group__list">
+          <li class="main-group__list-item">HTML 5</li>
+          <li class="main-group__list-item">CSS 3</li>
+          <li class="main-group__list-item">Responsive Design</li>
+        </ul>
+
+        <p>During my studies, I always seek out best practices and design methodologies to help make me more efficient. Some of the methodologies I have adopted are:</p>
+
+        <ul>
+          <li class="main-group__list-item">"DRY" CSS</li>
+          <li class="main-group__list-item">OOCSS</li>
+          <li class="main-group__list-item">Modular CSS</li>
+          <li class="main-group__list-item">BEM Naming Convetions</li>
+        </ul>
+
       </div>
-      <div class="footer__group">
-        <span>Contact</span>
+
+      <div class="main__group">
+        <h2>Projects</h2>
+
+        <div class="main__project">
+          <h3 class="main__project-title">willrwarner.com</h3>
+          <div class="main__project-content">
+            <div>
+              <img class="main__project-image" src="img/willrwarner.com.png" alt ="willrwarner.com page image">
+            </div>
+
+            <div>
+              <h4>Description:</h4>
+              <p>I developed this site as portfolio for my projects</p>
+
+              <h4>Skills:</h4>
+              <ul>
+                <li>HTML 5</li>
+                <li>CSS 3</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div class="main__group">
+
+        <h2>Contact</h2>
+
         <form>
-          <label></label>
+          <label>
+            Name<input type="text">
+          </label>
+          <label>
+            Email<input type="email">
+          </label>
+          <label>
+            Phone<input type="text">
+          </label>
+          <label>
+            Message<textarea></textarea>
+          </label>
+          <label>
+            Submit<input type="submit">
+          </label>
         </form>
       </div>
-    </footer>
+
+    </main>
   </body>
 </html>

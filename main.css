@@ -1,24 +1,21 @@
 /*RESETS*/
-main, body, footer, nav, p, section, div, a, span, header {
-  font-size: 12px;
+main, body, footer, nav, p, section, div, a, span, header, ul{
   box-sizing: border-box;
+
+  margin: 0;    /*Add for production*/
+  padding: 0;   /*Add for production*/
 }
 
-* {
+/* * {
   padding: 5px;
   margin: 5px;
   border: 1px solid black;
-}
+} */
 
 html, body {
   height: 100%;
   margin: 0;      /*Remove this for production*/
   padding: 0;     /*Remove this for production*/
-}
-
-li {
-  list-style-type: none;
-  display: inline-block;
 }
 
 /*Structures the body to be a flex box to create a fixed header*/
@@ -30,7 +27,9 @@ body {
 
 /*Common properties for the main page elements*/
 .header, .main, .footer {
-  width: 85%;
+  padding-left: 10%;
+  padding-right: 10%;
+  width: 100%;
 }
 
 .header {
@@ -41,17 +40,32 @@ body {
   background-color: rgb(200,200,200);
 }
 
+.header__list-item, .main-group__list-item {
+  list-style-type: none;
+  display: inline-block;
+}
+
+.header__list-link {
+  display: inline-block;
+}
+
 .main {
   flex: 1;          /*Allows main to take up the available space*/
 
   overflow: auto;   /*Allows for scrolling*/
 }
 
-.footer {
-  display: flex;
-  justify-content: center;
+.main-group__list-item {
+  background-color: rgb(200,200,200);
 }
 
-.footer__group {
-  width: 35%;
+.main__project-content {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+}
+
+.main__project-image {
+  width: 100%;
+  margin: 0;    /*Remove this for production*/
+  padding: 0;   /*Remove this for production*/
 }
