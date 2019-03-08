@@ -1,9 +1,12 @@
 /*RESETS*/
-main, body, footer, nav, p, section, div, a, span, header, ul{
+main, body, footer, nav, p, section, div, a, span, header, ul, li{
   box-sizing: border-box;
 
   margin: 0;    /*Add for production*/
   padding: 0;   /*Add for production*/
+
+	font-family: 'Roboto Slab', serif;
+	color: #C5C6C7;
 }
 
 /* * {
@@ -37,7 +40,7 @@ body {
   justify-content: space-between;
   align-items: center;
 
-  background-color: rgb(200,200,200);
+  background-color: #0B0C10;
 }
 
 .header__list-item{
@@ -47,9 +50,19 @@ body {
   padding-right; 5px;
 }
 
+.intro__link {
+	color: white;
+}
+
 .main-group__list-item {
   list-style-type: none;
   display: inline-block;
+  
+  margin: 10px 10px 10px 0;
+  padding: 5px;
+ 
+  color: #0B0C10;
+  background-color: #45A29E; 
 }
 
 .header__group {
@@ -66,6 +79,8 @@ body {
   flex: 1;          /*Allows main to take up the available space*/
 
   overflow: auto;   /*Allows for scrolling*/
+  
+  background-color: #1F2833;
 }
 
 .main-group__list-item {
@@ -81,4 +96,25 @@ body {
   width: 100%;
   margin: 0;    /*Remove this for production*/
   padding: 0;   /*Remove this for production*/
+}
+
+.project-card {
+
+	display: grid;
+	grid-template-areas: "image	title"
+										 "image	content";
+	grid-template-columns: 300px 1fr;
+	grid-template-rows: auto minmax(200px, 1fr);
+}
+
+.project-card__title {
+	grid-area: title;
+}
+
+.project-card__image {
+	grid-area: image;
+}
+
+.project-card__content {
+	grid-area: body;
 }
