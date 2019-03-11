@@ -1,5 +1,5 @@
 /*RESETS*/
-main, body, footer, nav, p, section, div, a, span, header, ul, li{
+main, body, footer, nav, p, section, div, a, span, header, ul, li, h1,h2, h3,h4,h5{
   box-sizing: border-box;
 
   margin: 0;    /*Add for production*/
@@ -7,7 +7,16 @@ main, body, footer, nav, p, section, div, a, span, header, ul, li{
 
 	font-family: 'Roboto Slab', serif;
 	color: #C5C6C7;
+
+  padding: 0;
+  margin: 0;
 }
+
+h1, h2, h3, h4, h5, h5, p {
+margin-top: 10px;
+margin-bottom: 10px;
+}
+
 
 /* * {
   padding: 5px;
@@ -57,15 +66,15 @@ body {
 .main-group__list-item {
   list-style-type: none;
   display: inline-block;
-  
+
   margin: 10px 10px 10px 0;
   padding: 5px;
- 
+
   color: #0B0C10;
-  background-color: #45A29E; 
+  background-color: #45A29E;
 }
 
-.header__group {
+.header__list {
 	display: flex;
 	align-items: center;
 	padding-top: 5px;
@@ -79,12 +88,8 @@ body {
   flex: 1;          /*Allows main to take up the available space*/
 
   overflow: auto;   /*Allows for scrolling*/
-  
-  background-color: #1F2833;
-}
 
-.main-group__list-item {
-  background-color: rgb(200,200,200);
+  background-color: #1F2833;
 }
 
 .main__project-content {
@@ -99,22 +104,62 @@ body {
 }
 
 .project-card {
-
 	display: grid;
-	grid-template-areas: "image	title"
-										 "image	content";
+	grid-template-areas:  "title title"
+                        "image content";
 	grid-template-columns: 300px 1fr;
-	grid-template-rows: auto minmax(200px, 1fr);
+
+  border-bottom: 1px solid #c5C6C7;
 }
 
-.project-card__title {
-	grid-area: title;
+.project-card__subtitle {
+  grid-area: title;
+
+  margin: 10px 0 10px 0;
+}
+
+.project-card__image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  grid-area: image;
+
+  padding: 10px;
 }
 
 .project-card__image {
-	grid-area: image;
+  width: 100%;
 }
 
 .project-card__content {
-	grid-area: body;
+  grid-area: content;
 }
+
+.project-card__text {
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.project-card__list {
+  margin-left: 10px;
+}
+
+.project-card__list-item {
+  list-style-type: none;
+  display: inline-block;
+
+  margin: 5px 5px 5px 0;
+  padding: 5px;
+
+  color: #0B0C10;
+  background-color: #45A29E;
+}
+
+.contact__form {
+  display: grid;
+  grid-template-areas:  ".    .  ."
+                        "message  message .";
+}
+
+.contact
