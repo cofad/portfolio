@@ -82,11 +82,18 @@ HEX: #484f4f
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 10px;
+	padding: 10px 0 20px 0;
+
+	width: 100%;
 }
 
-.section--grey {
-	background-color: #563f46;
+.section--light-grey {
+	background-color: #AAA;
+	color: white;
+}
+
+.section--dark-grey {
+	background-color: #101010;
 	color: white;
 }
 
@@ -105,7 +112,7 @@ HEX: #484f4f
 	margin: 10px 0 0 0;
 }
 .about-card__link {
-	color: white;
+	color: black;
 }
 
 .project-card {
@@ -135,4 +142,53 @@ HEX: #484f4f
 
 .project-card__content {
 	grid-area: content;
+}
+
+.contact-card {
+	display: grid;
+	grid-template-areas:	"name	 name	 email	 email"
+							"message message message message"
+							".		 .		 submit	 clear";
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 30px 60px 30px;
+	grid-gap: 10px;
+
+	width: 50%;
+
+	border-radius: 4px;
+	
+	margin: 20px 0 0 0;
+	padding: 10px;
+}
+
+.contact-card__input-name {
+	grid-area: name;
+
+	border-radius: 5px;
+
+	padding: 10px;
+}
+
+.contact-card__input-email {
+	grid-area: email;
+
+	border-radius: 5px;
+
+	padding: 10px;
+}
+
+.contact-card__input-message {
+	grid-area: message;
+
+	border-radius: 5px;
+
+	padding: 10px;
+}
+
+.contact-card__btn-submit {
+	grid-area: submit;
+}
+
+.contact-card__btn-clear {
+	grid-area: clear;
 }
