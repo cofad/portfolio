@@ -1,5 +1,12 @@
 /*William Warner*/
 
+/* 
+HEX: #c8c3cc
+HEX: #563f46
+HEX: #8ca3a3
+HEX: #484f4f
+*/
+
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -75,13 +82,30 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	padding: 10px;
 }
 
 .section--grey {
-	background-color: #101010;
+	background-color: #563f46;
 	color: white;
+}
+
+.about-card {
+	width: 90%;
+
+	background-color: #888;
+
+	border-radius: 4px;
 	
+	margin: 20px 0 0 0;
 	padding: 10px;
+}
+
+.about-card__text {
+	margin: 10px 0 0 0;
+}
+.about-card__link {
+	color: white;
 }
 
 .project-card {
