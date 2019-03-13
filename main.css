@@ -40,10 +40,6 @@
 	margin: 3px;
 }
 
-.main {
-
-}
-
 .hero {
 	display: flex;
 	flex-direction: column;
@@ -73,4 +69,46 @@
 	font-size: 18px;
 	
 	margin: 10px 0 0 0;
+}
+
+.section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.section--grey {
+	background-color: #101010;
+	color: white;
+	
+	padding: 10px;
+}
+
+.project-card {
+	display: grid;
+	grid-template-areas:	"title	title"
+							"image	content";
+	grid-template-columns: 200px 1fr;
+
+	width: 90%;
+
+	background-color: #888;
+
+	border-radius: 4px;
+	
+	margin: 20px 0 0 0;
+	padding: 10px;
+}
+
+.project-card__title {
+	grid-area: title;
+	margin: 0 0 10px 0;
+}
+
+.project-card__image {
+	grid-area: image;
+}
+
+.project-card__content {
+	grid-area: content;
 }
