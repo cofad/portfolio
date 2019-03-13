@@ -5,7 +5,7 @@
 	margin: 0;
 	padding: 0;
 
-	font-family: 'Rubik', sans-serif;
+	font-family: Raleway, hevetica, sans-serif;
 }
 
 .body {
@@ -47,7 +47,7 @@
 
 	color: white;
 	
-	height: 100vh; 
+	height: 70vh; 
 	
 	background: url("img/aidan-formigoni-547537-unsplash.jpg") center center;
 	background-size: cover;
@@ -78,23 +78,22 @@
 	padding: 10px 0 20px 0;
 
 	width: 100%;
-}
-
-.section--light-grey {
-	background-color: #AAA;
-	color: white;
+	
+	background-color: rgb(255, 255, 255);
+	color: rgb(85,85,85);
 }
 
 .section--dark-grey {
-	background-color: #101010;
+	background-color: #2C2625;
 	color: white;
 }
 
 .about-card {
 	width: 90%;
 
-	background-color: #888;
-
+	background-color: white
+		color: rbg(85,85,85);
+		
 	border-radius: 4px;
 	
 	margin: 20px 0 0 0;
@@ -103,43 +102,92 @@
 
 .about-card__text {
 	margin: 10px 0 0 0;
+	
+	color: rgb(80,80,80);
 }
 .about-card__link {
 	color: black;
 }
 
 .project-card {
-	display: grid;
-	grid-template-areas:	"title	title"
-							"image	content";
-	grid-template-columns: 200px 1fr;
 
-	width: 90%;
+	display: flex;
+	align-items: center;
 
-	background-color: #888;
-
-	border-radius: 4px;
+	background-color: #FFF;
+	color: black;
 	
-	margin: 20px 0 0 0;
-	padding: 10px;
+	margin: 80px 0 0 0;
+	
+	padding: 20px;
+}
+
+.project-card--reversed {
+	flex-direction: row-reverse;
+}
+
+@media only screen and (max-width: 980px) {
+	.project-card {
+		flex-direction: column;
+	}
+	
+	.project-card--reversed {
+		flex-direction: column;
+	}
 }
 
 .project-card--no-grid {
 	display: inline-block;
 }
 
-.project-card__title {
-	grid-area: title;
-	margin: 0 0 10px 0;
-}
-
 .project-card__image {
-	grid-area: image;
+	height: 225px;
+	width: 400px;
+
+	border: 1px solid rgb(80,80,80);
 }
 
 .project-card__content {
-	grid-area: content;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	
+	color: rgb(80,80,80);
+	
+	width: 500px;
+	height: 225px;
+	
+	margin-left: 20px;
 }
+
+.project-card__title {
+	grid-area: title;
+}
+
+.project-card__text {
+	line-height: 2;
+}
+
+.project-card__link {
+	border: 1px solid black;
+	border-radius: 5px;
+	
+	color: black;
+	
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	width: 150px;
+	
+	padding: 10px;
+	margin-right: 10px;
+	
+	text-decoration: none;
+	
+	float: left;
+}
+
 
 .contact-card {
 	display: grid;
