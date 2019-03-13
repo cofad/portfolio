@@ -124,6 +124,10 @@
 	padding: 10px;
 }
 
+.project-card--no-grid {
+	display: inline-block;
+}
+
 .project-card__title {
 	grid-area: title;
 	margin: 0 0 10px 0;
@@ -184,4 +188,32 @@
 
 .contact-card__btn-clear {
 	grid-area: clear;
+}
+
+/*Etch-A-Sketch*/
+
+.etch-a-sketch {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	padding: 10px;
+}
+
+.js-etch-a-sketch__grid {
+	display: grid;
+	border: 1px solid rgb(0,0,0);
+
+	background-color: white;
+}
+
+.jsetch-a-sketch__grid-item {
+	box-sizing: border-box;
+
+	border: 0.25px solid rgb(244,244,244);
+}
+
+.etch-a-sketch__btn-container {
+	margin: 10px;
 }
