@@ -25,6 +25,7 @@ function createGrid(numRows,numCols) {
 		var grid = document.getElementsByClassName("js-etch-a-sketch__grid")[0];
 		var strGridTemplateColumns = "repeat("+strNumCols+","+strColWidthPX+"px";
 		grid.style.gridTemplateColumns = strGridTemplateColumns;
+		grid.style.width = String(GRID_WIDTH);
 
 		//Add divs to grid
 		var div = document.createElement('div');
