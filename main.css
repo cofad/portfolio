@@ -17,6 +17,8 @@
 	top: 0;
 	left: 0;
 	
+	background-color: #2C2625;
+
 	color: white;
 
 	display: flex;
@@ -24,7 +26,10 @@
 	justify-content: space-between;
 
 	width: 100%;
+	height: 55px;
 	
+	z-index: 1;
+
 	padding: 10px;
 }
 
@@ -77,6 +82,8 @@
 	align-items: center;
 	padding: 10px 0 20px 0;
 
+	position: relative;
+
 	width: 100%;
 	
 	background-color: rgb(255, 255, 255);
@@ -86,6 +93,11 @@
 .section--dark-grey {
 	background-color: #2C2625;
 	color: white;
+}
+
+.section__target {
+	position: absolute;
+	top: -55px;
 }
 
 .about-card {
