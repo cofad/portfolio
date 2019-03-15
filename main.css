@@ -189,6 +189,7 @@
 	grid-gap: 10px;
 
 	width: 50%;
+	min-width: 300px;
 
 	border-radius: 4px;
 	
@@ -276,5 +277,15 @@
 
 	.project-card__title {
 		margin: 10px 0 10px 0;
+	}
+
+	.contact-card {
+		grid-template-areas:	"name"
+								"email"
+								"message"
+								"submit"
+								"clear";
+		grid-template-columns: 1fr;
+		grid-template-rows: 30px 30px 60px 30px 30px ;
 	}
 }
