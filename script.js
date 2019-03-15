@@ -1,8 +1,5 @@
 //William Warner
 
-const GRID_HEIGHT = 200;
-const GRID_WIDTH = GRID_HEIGHT*2;
-
 //Initialization
 createGrid(16,16*2);
 
@@ -18,21 +15,17 @@ function createGrid(numRows,numCols) {
 
 	for (var i=0; i<(numRows*numCols); i++) {
 		var strNumCols = String(numCols);
-		var strColWidthPX = String(GRID_WIDTH/numCols);
-		var strRowWidthPX = String(GRID_HEIGHT/numRows);
 
 		//Set-up Grid
 		var grid = document.getElementsByClassName("js-etch-a-sketch__grid")[0];
-		var strGridTemplateColumns = "repeat("+strNumCols+","+strColWidthPX+"px";
+		var strGridTemplateColumns = "repeat("+strNumCols+",1fr)";
 		grid.style.gridTemplateColumns = strGridTemplateColumns;
-		grid.style.width = String(GRID_WIDTH);
 
 		//Add divs to grid
 		var div = document.createElement('div');
 		div.setAttribute('class', 'js-etch-a-sketch__grid-item');
 		div.setAttribute('id', 'js-etch-a-sketch__grid-item-' + String(i));
-		div.style.width = strColWidthPX + "px";
-		div.style.height = strRowWidthPX + "px";
+
 		div.addEventListener("mouseover", setBackgroundColor);
 		grid.appendChild(div);
 	}
