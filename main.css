@@ -249,10 +249,7 @@
 	flex-direction: column;
 
 	width: 50%;
-
 	min-height: 300px;
-
-	padding: 10px;
 }
 
 .js-etch-a-sketch__grid {
