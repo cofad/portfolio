@@ -56,6 +56,7 @@
 	
 	background: url("img/aidan-formigoni-547537-unsplash.jpg") center center;
 	background-size: cover;
+	background-attachment: fixed;
 }
 
 .hero__title-container {
@@ -270,6 +271,16 @@
 
 .etch-a-sketch__btn-container {
 	margin: 10px;
+}
+
+.snake {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  }
+  
+.snake__canvas {
+	border: 1px solid black;
 }
 
 @media only screen and (max-width: 900px) {
