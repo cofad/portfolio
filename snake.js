@@ -11,6 +11,7 @@ var  framesThisSecond = 0;
  var running = false;
  var started = false;
  var frameID = 0;
+var isScrollingEnabled = true;
 
 var keyMap = {
   39: 'right',
@@ -49,15 +50,16 @@ canvas.height = CANVAS_HEIGHT;
 window.addEventListener("keydown", keydown, false);
 window.addEventListener("keyup", keyup, false);
 
-window.addEventListener("keydown", function(e) {
-    // space and arrow keys
-    if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
-        e.preventDefault();
-    }
-}, false);
+
+
 
 //Main Program
-start();  
+ctx.textAlign = "center";
+ctx.font = "24px Arial";
+ctx.fillText("LET'S PLAY SNAKE!!", CANVAS_WIDTH/2, CANVAS_HEIGHT/2);
+ctx.font = "12px Arial";
+ctx.fillText("PRESS THE SPACEBAR TO START GAME", CANVAS_WIDTH/2, CANVAS_HEIGHT/2+40);
+ctx.fillText("USE THE ARROW KEYS TO MOVE THE SNAKE", CANVAS_WIDTH/2, CANVAS_HEIGHT/2+60);
 
 //Game Loop Function
 function gameLoop(timestamp) {
@@ -73,11 +75,17 @@ function gameLoop(timestamp) {
       stop();
       ctx.textAlign = "center";
       ctx.font = "30px Arial";
-      ctx.fillText("GAME OVER", CANVAS_WIDTH/2, CANVAS_HEIGHT/2);		
+      ctx.fillText("GAME OVER", CANVAS_WIDTH/2, CANVAS_HEIGHT/2);
+	  ctx.textAlign = "center";
+		ctx.font = "12px Arial";
+		ctx.fillText("PRESS SPACEBAR TO START NEW GAME", 
+							CANVAS_WIDTH/2, CANVAS_HEIGHT/2+20);
+		
     } else {
       ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);    
       drawSnake(snake);
       drawFood(food);
+	  drawScore(snake);
       frameId = window.requestAnimationFrame(gameLoop);
     }
 
@@ -89,6 +97,14 @@ function start() {
     if (!started) {
         
 		  started = true;
+		
+		window.addEventListener("keydown", arrowKeyScrollingDisabled, false);
+		
+	snake = {
+  		body: [[CANVAS_WIDTH/2,CANVAS_HEIGHT/2]],
+  		dirX: 0,
+  		dirY: 0
+	}
 		
       frameID = requestAnimationFrame(function(timestamp) {
       createFood(food);
@@ -104,9 +120,18 @@ function start() {
 }
 
 function stop() {
+	 window.removeEventListener("keydown", arrowKeyScrollingDisabled, false);
+	
     running = false;
     started = false;
     cancelAnimationFrame(frameID);
+}
+
+function drawScore(snake) {
+	 ctx.fillStyle = "rgb(10,20,200)"
+	  ctx.font = "10px Arial";
+	  ctx.textAlign = "left";
+      ctx.fillText("Food Eaten = " + (snake.body.length-1) , 5,10);		
 }
 
 function drawFood(food) {
@@ -191,13 +216,24 @@ function checkCollision(snake) {
 function keydown(event) {
   var key = keyMap[event.keyCode];
   pressedKeys[key] = true;
-
+	
   if (pressedKeys.spacebar === true && running === false) {
-    start();
+    	 event.preventDefault();	//Prevent page from scrolling to bottom
+	  
+	  start();
   }
+  
 }
 
 function keyup(event) {
   var key = keyMap[event.keyCode];
   pressedKeys[key] = false;
+}
+
+function arrowKeyScrollingDisabled(e) {
+    switch(e.keyCode){
+        case 37: case 39: case 38:  case 40: // Arrow keys
+        case 32: e.preventDefault(); break; // Space
+        default: break; // do not block other keys
+    }
 }
