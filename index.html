@@ -259,22 +259,27 @@
 			
 			<section class="section" id="contact">
 				<h1 class="section__title">Contact</h1>
+				<p class="contact__text" id="js-contact__text">Please enter a message below!</p>
 
-				<form class="contact-card">
-					<input class="contact-card__input-name" type="text" name="name"
-							placeholder="Name">
-					<input class="contact-card__input-email" type="email" name="email"
-							placeholder="Email">
-					<textarea class="contact-card__input-message"
-							placeholder="Please enter a message...">
+				<form class="contact-card" id="js-contact-card">
+					<input class="contact-card__input-name" id="js-contact-card__input-name"
+							type="text" name="name" placeholder="Name">
+					<input class="contact-card__input-email" id="js-contact-card__input-email"
+							type="email" name="email" placeholder="Email">
+					<textarea class="contact-card__input-message" id="js-contact-card__input-message"
+							name="message" placeholder="Please enter a message...">
 					</textarea>
-					<input class="contact-card__btn-submit" type="button" value="Submit">
-					<input class="contact-card__btn-clear" type="button" value="Clear">
+					<input class="contact-card__btn-submit" type="submit" value="Submit">
+					<input class="contact-card__btn-clear" id="js-contact-card__btn-submit"
+							type="button" value="Clear">
 				</form>
 			</section>
 
 		</main>
+
 		<script src="etch-a-sketch.js"></script>
 		<script src="snake.js"></script>
+		<script src="send-email.js"></script>
+
 	</body>
 </html>

@@ -241,6 +241,10 @@
 	grid-area: clear;
 }
 
+.contact__text {
+	margin-top: 10px;
+}
+
 /*Etch-A-Sketch*/
 
 .etch-a-sketch {
