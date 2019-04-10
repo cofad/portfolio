@@ -32,7 +32,7 @@
 	<body class="body">
 	
 		<header class="header">
-			<a class="header__link" href="">willrwarner.com</a>
+			<a class="header__link" href="#"><img class="header__logo" src="img/w2-logo.png"></img></a>
 			
 			<div class ="header__links">
 				<a class="header__link" href="#about">About</a>
@@ -55,10 +55,14 @@
 		<main class="main">
 		
 			<section class="hero">
-				<div class="hero__title-container">
-					<h1 class="hero__title">Will R. Warner</h1>
-				</div>
-				<p class = "hero__tag">Memphian // Father // Developer</p>
+				<img class="hero__image" src="img/headshot-angled-cropped.png"></img>
+				<div class="hero__body">
+					<img class="hero__logo" src="img/w2-logo.png"></img>
+					<div class="hero__title-container">
+						<h1 class="hero__title">Will R. Warner</h1>
+						<h3 class ="hero__tag">Memphian // Father // Developer</h3>
+					</div>					
+				</div>		
 			</section>
 			
 			<section class="section">
@@ -66,27 +70,25 @@
 				<a class="section__target" id="about"></a>
 				<h1 class="section__title">About Me</h1>
 
-				<div class="about-card">
-					<p class="about-card__text">
-						Hi, I'm a front end developer located in Memphis, TN. My
-						background is in Mechanical Engineering, but I recently developed
-						an interest in web development. I was able to gain some knowledge
-						through the Tech901 web programming	course, and now I'm seeking to
-						use those skills in the real world!
-					</p>
-					
-					<p class="about-card__text">Here's a link to my 
-						<a class="about-card__link"
-								href="docs/William_Warner_Resume_20181222.pdf"
-								target="_blank">resume
-						</a>
-						to get a complete history of my work experience. My resume will
-						help to highlight my experience in a professional setting, while
-						the projects section of this page will show off my web development
-						skills.
-					</p>
-				</div>
+				<div class="about-container">
+					<div class="about-card">
+						<h2 class="about-card__title">Family</h2>
+					</div>
 
+					<div class="about-card">
+							<h2>Education</h2>
+							<p>Tech901 2019</p>
+							<p>Mississippi State - 2012 - 4.0 GPA</p>
+					</div>
+
+					<div class="about-card">
+						<h2>Work History</h2>
+					</div>
+
+					<div class="about-card">
+							<h2>Future</h2>
+						</div>
+				</div>
 			</section>
 
 			<section class="section section--dark-grey">
@@ -94,167 +96,167 @@
 				<a class="section__target" id="projects"></a>
 				<h1 class="section__title">Projects</h1>
 
-				<div class="project-card">
-					
-					<img class="project-card__image" src="img/google.png"
-							alt="Google Project">
-					
-					<div class="project-card__content">
-						<h2 class="project-card__title">Google.com Clone</h2>
-						<p class="project-card__text">
-							Google.com has a very simple but familiar search page. It was my
-							first time building a page, and the goal was to mimic the look of
-							the website and but not the functionality.
-						</p>
-						<div class="project-card__links">
-							<a class="project-card__link"
-									href="https://will-r-warner.github.io/google-homepage-clone/"
-									target="_blank">
-								Webpage
-							</a>
-							<a class="project-card__link"
-									href="https://github.com/will-r-warner/google-homepage-clone"
-									target="_blank">
-								Github
-							</a>
-						</div>
-					</div>
-				</div>
-
-				<div class="project-card project-card--reversed">
-					
-					<img class="project-card__image" src="img/mint.png"
-							alt="Mint.com Project">
-					
-					<div class="project-card__content">
-						<h2 class="project-card__title">Mint.com Login Clone</h2>
-						<p class="project-card__text">
-							Mint.com has a nice new user input form and it is a good example 
-							to practice creating. As with the google page, the goal was to 
-							create the look but not the functionality of the page.
-						</p>
-						<div class="project-card__links">
-							<a class="project-card__link" 
-									href="https://will-r-warner.github.io/mint.com-login-clone/"
-									target="_blank">
-								Webpage
-							</a>
-							<a class="project-card__link"
-									href="https://github.com/will-r-warner/mint.com-login-clone"
-									target="_blank">
-								GitHub
-							</a>
-						</div>
-					</div>
-				</div>
-
-				<div class="project-card">
-					
-					<img class="project-card__image" src="img/nyt.png"
-							alt="New York Times Project">
-					
-					<div class="project-card__content">
-						<h2 class="project-card__title">NewYorkTimes.com Article Clone</h2>
-						<p class="project-card__text">
-							To further build up my programming chops, I replicated an article 
-							page from the New York Times. In this exercise, I focused on the 
-							main content of the page and ignored all the ads and pop ups. It 
-							helped to further develop my skills, especially "flexbox" and 
-							"grid".
-						</p>
-						<div class="project-card__links">
-							<a class="project-card__link"
-									href="https://will-r-warner.github.io/nyt-article-page-clone/"
-									target="_blank">
-								Webpage
-							</a>
-							<a class="project-card__link"
-									href="https://github.com/will-r-warner/nyt-article-page-clone"
-									target="_blank">
-								GitHub
-							</a>
-						</div>
-					</div>
-				</div>
-
-				<div class="project-card project-card--reversed">
-					
-					<img class="project-card__image" src="img/apple.png"
-							alt="Apple Project">
-					
-					<div class="project-card__content">
-						<h2 class="project-card__title">Apple.com Clone</h2>
-						<p class="project-card__text">
-							To gain some experience with background images, I built a replica 
-							of the apple.com website. I was able to figure out how to link the
-							 image to the background of the page and use other images on the 
-							 page as well.
-						</p>
-						<div class="project-card__links">
-							<a class="project-card__link"
-									href="https://will-r-warner.github.io/apple-page-clone/"
-									target="_blank">
-								Webpage
-							</a>
-							<a class="project-card__link"
-									href="https://github.com/will-r-warner/apple-page-clone"
-									target="_blank">
-								GitHub
-						</a>
-						</div>
-					</div>
-				</div>
-
-				<div class="project-card">
-					
-					<div class="etch-a-sketch">			
-						<div class="js-etch-a-sketch__grid">
-						</div>
-
-						<div class="etch-a-sketch__btn-container">
-							<button class="js-etch-a-sketch__btn-reset" type="button">
-								Reset Grid Density
-							</button>
-							<button class="js-etch-a-sketch__btn-clear" type="button">
-								Clear Grid
-							</button>
-						</div>
-					</div>
-					
-					<div class="project-card__content">
-						<h2 class="project-card__title">Etch-A-Sketch</h2>
-						<p class="project-card__text">Etch-A-Sketch</p>
-						<div class="project-card__links">
-							<a class="project-card__link" href="" target="_blank">
-								Webpage
-							</a>
-							<a class="project-card__link" href="" target="_blank">
-								GitHub
-							</a>
-						</div>
-					</div>
-				</div>
-
-				<div class="project-card">
-					
-					<div class="snake">
-						<canvas class="snake__canvas"></canvas>
-					</div>
-
-					<div class="project-card__content">
-						<h2 class="project-card__title">Snake</h2>
-						<p class="project-card__text">Snake</p>
-						<div class="project-card__links">
-							<a class="project-card__link" href="" target="_blank">
-								Webpage
-							</a>
-							<a class="project-card__link" href="" target="_blank">
-								GitHub
-							</a>
-						</div>
-					</div>
-				</div>
+				<div class=project-container>
+					<div class="project-card">
 						
+						<a class="project-card__link"
+								href="https://github.com/will-r-warner/google.com-clone"
+								target="_blank">
+							<img class="project-card__image" src="img/google.png"
+									alt="Google Search">
+						</a>
+						
+						<div class="project-card__content">
+							<h2 class="project-card__title">Google Search</h2>
+							<p class="project-card__text">
+								Google.com has a very simple but familiar search page. It was my
+								first time building a page, and the goal was to mimic the look of
+								the website and but not the functionality.
+							</p>
+							<div class="project-card__links">
+								<a class="project-card__link" 
+										href="https://will-r-warner.github.io/google.com-clone/"
+										target="_blank">
+									See the code
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="project-card">
+						
+						<a class="project-card__link"
+								href="https://github.com/will-r-warner/mint.com-login-clone"
+								target="_blank">
+							<img class="project-card__image" src="img/mint.png"
+								alt="Mint.com Project">
+						</a>
+						
+						<div class="project-card__content">
+							<h2 class="project-card__title">Mint.com Login</h2>
+							<p class="project-card__text">
+								Mint.com has a nice new user input form and it is a good example 
+								to practice creating. As with the google page, the goal was to 
+								create the look but not the functionality of the page.
+							</p>
+							<div class="project-card__links">
+								<a class="project-card__link" 
+										href="https://will-r-warner.github.io/mint.com-login-clone/"
+										target="_blank">
+									See the code
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="project-card">
+						
+						<a class="project-card__link"
+								href="https://will-r-warner.github.io/nyt-article-page-clone/"
+								target="_blank">
+							<img class="project-card__image" src="img/nyt.png"
+									alt="New York Times Project">	
+						</a>
+
+						<div class="project-card__content">
+							<h2 class="project-card__title">NYY Article</h2>
+							<p class="project-card__text">
+								To further build up my programming chops, I replicated an article 
+								page from the New York Times. In this exercise, I focused on the 
+								main content of the page and ignored all the ads and pop ups. It 
+								helped to further develop my skills, especially "flexbox" and 
+								"grid".
+							</p>
+							<div class="project-card__links">
+
+								<a class="project-card__link"
+										href="https://github.com/will-r-warner/nyt-article-page-clone"
+										target="_blank">
+									See the Code
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="project-card">
+						<a class="project-card__link"
+								href="https://will-r-warner.github.io/apple-page-clone/"
+								target="_blank">
+							<img class="project-card__image" src="img/apple.png"
+								alt="Apple Project">
+						</a>						
+						
+						
+						<div class="project-card__content">
+							<h2 class="project-card__title">Apple.com</h2>
+							<p class="project-card__text">
+								To gain some experience with background images, I built a replica 
+								of the apple.com website. I was able to figure out how to link the
+								image to the background of the page and use other images on the 
+								page as well.
+							</p>
+							<div class="project-card__links">
+
+								<a class="project-card__link"
+										href="https://github.com/will-r-warner/apple-page-clone"
+										target="_blank">
+									See the Code
+							</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="project-card">
+						
+						<div class="etch-a-sketch">			
+							<div class="js-etch-a-sketch__grid">
+							</div>
+
+							<div class="etch-a-sketch__btn-container">
+								<button class="js-etch-a-sketch__btn-reset" type="button">
+									Reset Grid Density
+								</button>
+								<button class="js-etch-a-sketch__btn-clear" type="button">
+									Clear Grid
+								</button>
+							</div>
+						</div>
+						
+						<div class="project-card__content">
+							<h2 class="project-card__title">Etch-A-Sketch</h2>
+							<p class="project-card__text">Etch-A-Sketch</p>
+							<div class="project-card__links">
+								<a class="project-card__link" href="" target="_blank">
+									Webpage
+								</a>
+								<a class="project-card__link" href="" target="_blank">
+									GitHub
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="project-card">
+						
+						<div class="snake">
+							<canvas class="snake__canvas"></canvas>
+						</div>
+
+						<div class="project-card__content">
+							<h2 class="project-card__title">Snake</h2>
+							<p class="project-card__text">Snake</p>
+							<div class="project-card__links">
+								<a class="project-card__link" href="" target="_blank">
+									Webpage
+								</a>
+								<a class="project-card__link" href="" target="_blank">
+									GitHub
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+					
 			</section>
 
 			<section class="section" id="contact">
