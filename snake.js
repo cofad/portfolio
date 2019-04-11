@@ -1,5 +1,5 @@
-const CANVAS_WIDTH = 600;
-const CANVAS_HEIGHT = 300;
+const CANVAS_WIDTH = 400;
+const CANVAS_HEIGHT = 200;
 const MAX_FPS = 20;
 
 //Initialization
@@ -126,14 +126,14 @@ function stop() {
 }
 
 function drawScore(snake) {
-  ctx.fillStyle = "rgb(10,20,200)"
+  ctx.fillStyle = "rgb(255,255,255)"
 	ctx.font = "10px Arial";
   ctx.textAlign = "left";
   ctx.fillText("Food Eaten = " + (snake.body.length-1) , 5,10);		
 }
 
 function drawFood(food) {
-  ctx.fillStyle = "rgb(10,20,200)"
+  ctx.fillStyle = "rgb(255,255,255)"
 	ctx.fillRect(food.x, food.y, 10, 10);
 }
 
