@@ -238,7 +238,7 @@ function  drawStartText() {
 }
 
 function setCanvasDimensions() {
-  canvasWidth = Math.round((document.getElementById("js-snake__container").offsetWidth-20)/20)*20;
+  canvasWidth = Math.round((document.getElementById("js-snake__container").offsetWidth-40)/20)*20;
   canvas.width = canvasWidth;
   canvas.height = CANVAS_HEIGHT;
   console.log(canvasWidth);
