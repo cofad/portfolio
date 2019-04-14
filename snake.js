@@ -1,3 +1,7 @@
+//William Warner
+//willrwarner.com
+//snake.js
+
 const CANVAS_HEIGHT = 200;
 const MAX_FPS = 20;
 
