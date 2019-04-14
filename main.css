@@ -143,6 +143,7 @@
 
 .about-card__text {
 	margin: 10px 0px 10px 0;
+	text-align: justify;
 }
 
 .about-card__image {
