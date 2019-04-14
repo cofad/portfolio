@@ -1,4 +1,10 @@
 /*William Warner*/
+/*willrwarner.com*/
+/*main.css*/
+
+/*---------------------------*/
+/*----------General----------*/
+/*---------------------------*/
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -12,6 +18,9 @@
 	height: 100vh;
 }
 
+/*--------------------------*/
+/*----------Header----------*/
+/*--------------------------*/
 .header {
 	position: fixed;
 	top: 0;
@@ -50,6 +59,9 @@
 	margin: 3px;
 }
 
+/*------------------------*/
+/*----------Hero----------*/
+/*------------------------*/
 .hero {
 	display: flex;
 	flex-direction: column;
@@ -89,6 +101,9 @@
 	margin: 10px 0 0 0;
 }
 
+/*---------------------------*/
+/*----------Section----------*/
+/*---------------------------*/
 .section {
 	display: flex;
 	flex-direction: column;
@@ -119,6 +134,9 @@
 	top: -55px;
 }
 
+/*-------------------------*/
+/*----------About----------*/
+/*-------------------------*/
 .about-container {
 	display: grid;
 	grid-template-columns: 1fr;
@@ -162,6 +180,9 @@
 	margin: 10px 0px 10px 0;
 }
 
+/*----------------------------*/
+/*----------Projects----------*/
+/*----------------------------*/
 .project-container {
 	display: grid;
 	grid-template-columns: 1fr;
@@ -209,6 +230,9 @@
 	color: black;
 }
 
+/*-------------------------*/
+/*----------GAMES----------*/
+/*-------------------------*/
 .game-card {
 	width: 90%;
 
@@ -245,7 +269,9 @@
 	padding: 20px;
 }
 
-/*Etch-A-Sketch*/
+/*---------------------------------*/
+/*----------Ethc-A-Sketch----------*/
+/*---------------------------------*/
 .etch-a-sketch {
 	display: flex;
 	justify-content: center;
@@ -276,7 +302,9 @@
 	margin: 10px;
 }
 
-/*Snake*/
+/*-------------------------*/
+/*----------Snake----------*/
+/*-------------------------*/
 .snake {
 	display: flex;
 	align-items: center;
@@ -287,6 +315,9 @@
 	border: 1px solid black;
 }
 
+/*---------------------------------*/
+/*----------Media Queries----------*/
+/*---------------------------------*/
 /*Media Queries */
 @media only screen and (min-width: 600px) {
 	.about-container {
