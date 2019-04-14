@@ -1,4 +1,3 @@
-const CANVAS_WIDTH = 400;
 const CANVAS_HEIGHT = 200;
 const MAX_FPS = 20;
 
@@ -12,6 +11,7 @@ var running = false;
 var started = false;
 var frameID = 0;
 var isScrollingEnabled = true;
+var canvasWidth = 0;
 
 var keyMap = {
   39: 'right',
@@ -22,7 +22,7 @@ var keyMap = {
 }
 
 var snake = {
-  body: [[CANVAS_WIDTH/2,CANVAS_HEIGHT/2]],
+  body: [[canvasWidth/2,CANVAS_HEIGHT/2]],
   dirX: 0,
   dirY: 0
 }
@@ -40,25 +40,17 @@ var pressedKeys = {
   spacebar: false
 }
 
-var canvas = document.getElementsByClassName("snake__canvas")[0];
-var ctx = canvas.getContext("2d");
-canvas.width = CANVAS_WIDTH;
-canvas.height = CANVAS_HEIGHT;
-
 //Event Listeners
 window.addEventListener("keydown", keydown, false);
 window.addEventListener("keyup", keyup, false);
+window.addEventListener("resize", windowResize);
 
 //Main Program
-//Game Loop will be called when the spacebar is pressed via
-//an event listener
-ctx.textAlign = "center";
-ctx.fillStyle = "#FFF"
-ctx.font = "24px Arial";
-ctx.fillText("LET'S PLAY SNAKE!!", CANVAS_WIDTH/2, CANVAS_HEIGHT/2);
-ctx.font = "12px Arial";
-ctx.fillText("PRESS THE SPACEBAR TO START GAME", CANVAS_WIDTH/2, CANVAS_HEIGHT/2+40);
-ctx.fillText("USE THE ARROW KEYS TO MOVE THE SNAKE", CANVAS_WIDTH/2, CANVAS_HEIGHT/2+60);
+var canvas = document.getElementById("js-snake__canvas");
+var ctx = canvas.getContext("2d");
+
+setCanvasDimensions();
+drawStartText();
 
 //Game Loop Function
 function gameLoop(timestamp) {
@@ -74,13 +66,13 @@ function gameLoop(timestamp) {
       stop();
       ctx.textAlign = "center";
       ctx.font = "30px Arial";
-      ctx.fillText("GAME OVER", CANVAS_WIDTH/2, CANVAS_HEIGHT/2);
+      ctx.fillText("GAME OVER", canvasWidth/2, CANVAS_HEIGHT/2);
       ctx.textAlign = "center";
       ctx.font = "12px Arial";
-      ctx.fillText("PRESS SPACEBAR TO START NEW GAME", CANVAS_WIDTH/2, CANVAS_HEIGHT/2+20);
+      ctx.fillText("PRESS SPACEBAR TO START NEW GAME", canvasWidth/2, CANVAS_HEIGHT/2+20);
 		
     } else {
-      ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);    
+      ctx.clearRect(0, 0, canvasWidth, CANVAS_HEIGHT);    
       drawSnake(snake);
       drawFood(food);
 	    drawScore(snake); 
@@ -99,7 +91,7 @@ function start() {
 		window.addEventListener("keydown", arrowKeyScrollingDisabled, false);
 		
 	  snake = {
-  		body: [[CANVAS_WIDTH/2,CANVAS_HEIGHT/2]],
+  		body: [[canvasWidth/2,CANVAS_HEIGHT/2]],
   		dirX: 0,
   		dirY: 0
 	  }
@@ -138,7 +130,7 @@ function drawFood(food) {
 }
 
 function createFood(food) {
-	food.x = Math.round(((Math.random()*(CANVAS_WIDTH-10))/10))*10;
+	food.x = Math.round(((Math.random()*(canvasWidth-10))/10))*10;
 	food.y = Math.round(((Math.random()*(CANVAS_HEIGHT-10))/10))*10;
 }
 
@@ -193,7 +185,7 @@ function checkCollision(snake) {
 	
 	var isCollision = false;
 	
-	if (snake.body[0][0] === CANVAS_WIDTH || snake.body[0][0] < 0) {
+	if (snake.body[0][0] === canvasWidth || snake.body[0][0] < 0) {
 		isCollision = true;
 	} else if(snake.body[0][1] === CANVAS_HEIGHT || snake.body[0][1] < 0) {
 		isCollision = true;
@@ -232,4 +224,26 @@ function arrowKeyScrollingDisabled(e) {
     case 32: e.preventDefault(); break; // Space
     default: break; // do not block other keys
   }
+}
+
+function  drawStartText() {
+  ctx.clearRect(0, 0, canvasWidth, CANVAS_HEIGHT); 
+  ctx.textAlign = "center";
+  ctx.fillStyle = "#FFF"
+  ctx.font = "24px Arial";
+  ctx.fillText("LET'S PLAY SNAKE!!", canvasWidth/2, CANVAS_HEIGHT/2);
+  ctx.font = "12px Arial";
+  ctx.fillText("PRESS THE SPACEBAR TO START GAME", canvasWidth/2, CANVAS_HEIGHT/2+40);
+  ctx.fillText("USE THE ARROW KEYS TO MOVE THE SNAKE", canvasWidth/2, CANVAS_HEIGHT/2+60);
+}
+
+function setCanvasDimensions() {
+  canvasWidth = Math.round((document.getElementById("js-snake__container").offsetWidth-20)/10)*10;
+  canvas.width = canvasWidth;
+  canvas.height = CANVAS_HEIGHT;
+}
+
+function windowResize() {
+  setCanvasDimensions();
+  drawStartText();
 }
