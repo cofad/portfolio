@@ -191,6 +191,9 @@
 }
 
 .project-card {
+	display: flex;
+	flex-direction: column;
+
 	background-color:#FFF;
 	color: white;
 		
@@ -199,19 +202,15 @@
 	margin: 10px;
 	padding: 10px;
 }
-
-.project-card__content-container {
-	padding: 10px;
-}
-
 .project-card__image {
 	width: 100%;
 }
 
 .project-card__content {
+	flex-grow: 1;
+
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
 
 	color: rgb(80,80,80);
 	
@@ -219,15 +218,22 @@
 }
 
 .project-card__text {
-	line-height: 1.5;
+
+	margin: 10px 0px 10px 0;
 }
 
 .project-card__links {
+	flex-grow: 1;
+	
+	display: flex;
+
 	margin-top: 10px;
 }
 
 .project-card__link {
-	color: black;
+	align-self: flex-end;
+
+	color: rgb(175,175,175);
 }
 
 /*-------------------------*/
@@ -261,7 +267,8 @@
 }
 
 .game-card__link{
-	color: white;
+	color: rgb(175,175,175);
+	
 	margin: 5px;
 }
 
