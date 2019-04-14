@@ -136,6 +136,11 @@
 	padding: 10px;
 }
 
+.about-card__sub-title {
+	margin-top: 10px;
+	color: rgb(150,150,150);
+}
+
 .about-card__text {
 	margin: 10px 0px 10px 0;
 }
@@ -144,9 +149,13 @@
 	width: 100%;
 }
 
+.about-card__link-container {
+ margin-top: 20px;
+}
+
 .about-card__link {
 	display: block;
-	color: white;
+	color: rgb(200,200,200);
 	margin: 10px 0px 10px 0;
 }
 
