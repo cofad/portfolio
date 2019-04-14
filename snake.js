@@ -238,9 +238,10 @@ function  drawStartText() {
 }
 
 function setCanvasDimensions() {
-  canvasWidth = Math.round((document.getElementById("js-snake__container").offsetWidth-20)/10)*10;
+  canvasWidth = Math.round((document.getElementById("js-snake__container").offsetWidth-20)/20)*20;
   canvas.width = canvasWidth;
   canvas.height = CANVAS_HEIGHT;
+  console.log(canvasWidth);
 }
 
 function windowResize() {
