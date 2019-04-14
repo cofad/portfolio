@@ -6,7 +6,7 @@ const MAX_FPS = 20;
 var lastFrameTimeMs = 0;
 var timestep = 1000/MAX_FPS;
 var delta = 0;
-var  framesThisSecond = 0;
+var framesThisSecond = 0;
 var lastFpsUpdate = 0;
 var running = false;
 var started = false;
@@ -53,6 +53,7 @@ window.addEventListener("keyup", keyup, false);
 //Game Loop will be called when the spacebar is pressed via
 //an event listener
 ctx.textAlign = "center";
+ctx.fillStyle = "#FFF"
 ctx.font = "24px Arial";
 ctx.fillText("LET'S PLAY SNAKE!!", CANVAS_WIDTH/2, CANVAS_HEIGHT/2);
 ctx.font = "12px Arial";
