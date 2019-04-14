@@ -119,16 +119,13 @@
 }
 
 .about-container {
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
+	display: grid;
+	grid-template-columns: 1fr;
 
 	width: 90%;
 }
 
 .about-card {
-	flex-grow: 1;
-
 	background-color: rgb(85,85,85);
 	color: white;
 		
@@ -136,9 +133,6 @@
 	
 	margin: 10px;
 	padding: 10px;
-
-	min-width: 250px;
-	max-width: 500px;
 }
 
 .about-card__text {
@@ -283,4 +277,15 @@
   
 .snake__canvas {
 	border: 1px solid black;
+}
+
+/*Media Queries */
+@media only screen and (min-width: 500px) {
+	.about-container {
+		grid-template-columns: repeat(2,1fr);
+}
+
+@media only screen and (min-width: 900px) {
+	.about-container {
+		grid-template-columns: repeat(3,1fr);
 }
