@@ -18,7 +18,7 @@ function createGrid(numRows,numCols) {
 		var strNumCols = String(numCols);
 
 		//Set-up Grid
-		var grid = document.getElementsByClassName("js-etch-a-sketch__grid")[0];
+		var grid = document.getElementById("js-etch-a-sketch__grid");
 		var strGridTemplateColumns = "repeat("+strNumCols+",1fr)";
 		grid.style.gridTemplateColumns = strGridTemplateColumns;
 
@@ -26,8 +26,6 @@ function createGrid(numRows,numCols) {
 		var div = document.createElement('div');
 		div.setAttribute('class', 'js-etch-a-sketch__grid-item');
 		div.setAttribute('id', 'js-etch-a-sketch__grid-item-' + String(i));
-		// div.textContent = i;
-		// div.style.fontSize = "7px";
 
 		div.addEventListener("mouseover", setBackgroundColor);
 		grid.appendChild(div);
@@ -35,7 +33,7 @@ function createGrid(numRows,numCols) {
 }
 
 function clearGrid() {
-	var gridItems = document.getElementsByClassName("js-etch-a-sketch__grid")[0].children;
+	var gridItems = document.getElementById("js-etch-a-sketch__grid").children;
 
 	for (var i=0; i<gridItems.length; i++) {
 		gridItems[i].style.backgroundColor = "white";
@@ -50,7 +48,7 @@ function setBackgroundColor() {
 }
 
 function removeGridElements() {
-	var grid = document.getElementsByClassName("js-etch-a-sketch__grid")[0];
+	var grid = document.getElementById("js-etch-a-sketch__grid");
 
 	while (grid.firstChild) {
 		grid.removeChild(grid.firstChild);

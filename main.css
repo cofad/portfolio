@@ -292,7 +292,7 @@
 	height: 300px;
 }
 
-.js-etch-a-sketch__grid {
+#js-etch-a-sketch__grid {
 	display: grid;
 	border: 1px solid rgb(0,0,0);
 
