@@ -138,7 +138,7 @@
 
 .about-card__sub-title {
 	margin-top: 10px;
-	color: rgb(150,150,150);
+	color: rgb(200,200,200);
 }
 
 .about-card__text {
@@ -155,7 +155,9 @@
 
 .about-card__link {
 	display: block;
-	color: rgb(200,200,200);
+	
+	color: rgb(175,175,175);
+
 	margin: 10px 0px 10px 0;
 }
 
