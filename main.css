@@ -100,13 +100,13 @@
   font-size: 48px;
 	text-align: center;
 	
-	font-weight: 700;
 	font-family: 'Caveat', cursive;
 }
 
 .hero__tag {
 	margin: 10px 0 0 0;
 
+	font-weight: 400;
 	font-size: 18px;
 }
 
