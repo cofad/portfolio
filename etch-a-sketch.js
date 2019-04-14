@@ -5,10 +5,10 @@ createGrid(16,16*2);
 // writeGridMessage();
 
 //Button Event Handlers
-resetButton = document.getElementsByClassName("js-etch-a-sketch__btn-reset")[0]
+resetButton = document.getElementById("js-etch-a-sketch__btn-reset");
 resetButton.addEventListener("click", resetGrid);
 
-clearButton = document.getElementsByClassName("js-etch-a-sketch__btn-clear")[0]
+clearButton = document.getElementById("js-etch-a-sketch__btn-clear");
 clearButton.addEventListener("click", clearGrid);
 
 //Functions
