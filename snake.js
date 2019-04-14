@@ -74,16 +74,15 @@ function gameLoop(timestamp) {
       ctx.textAlign = "center";
       ctx.font = "30px Arial";
       ctx.fillText("GAME OVER", CANVAS_WIDTH/2, CANVAS_HEIGHT/2);
-	  ctx.textAlign = "center";
-		ctx.font = "12px Arial";
-		ctx.fillText("PRESS SPACEBAR TO START NEW GAME", 
-							CANVAS_WIDTH/2, CANVAS_HEIGHT/2+20);
+      ctx.textAlign = "center";
+      ctx.font = "12px Arial";
+      ctx.fillText("PRESS SPACEBAR TO START NEW GAME", CANVAS_WIDTH/2, CANVAS_HEIGHT/2+20);
 		
     } else {
       ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);    
       drawSnake(snake);
       drawFood(food);
-	  drawScore(snake);
+	    drawScore(snake); 
       frameId = window.requestAnimationFrame(gameLoop);
     }
 
@@ -209,7 +208,6 @@ function checkCollision(snake) {
   }
 	return isCollision;	
 }
-
 
 function keydown(event) {
   var key = keyMap[event.keyCode];
