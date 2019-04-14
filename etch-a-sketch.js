@@ -64,24 +64,3 @@ function resetGrid() {
 	removeGridElements();
 	createGrid(numRows, numCols);
 }
-
-// function writeGridMessage() {
-
-// 	var messageGridItems = [
-// 		33,65,97,129,161,98,99,36,68,100,132,164,  	//H
-// 		38,70,102,134,166,													//I
-// 		40,72,104,168,															//!
-// 		225,257,289,321,353,226,227,228,229,259,291,323,355,261,293,325,357,	//M
-// 		231,263,295,327,359,232,233,265,297,329,361,360,	//o
-// 		235
-
-
-
-// 	];
-
-// 	for(var i=0; i<messageGridItems.length; i++) {
-// 		var div = document.getElementById("js-etch-a-sketch__grid-item-"+String(messageGridItems[i]));
-// 		div.style.backgroundColor = "rgb(0,0,0)";
-// 	}
-
-// }
