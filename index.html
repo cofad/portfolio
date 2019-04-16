@@ -289,12 +289,21 @@
 				<h1 class="section__title">Contact</h1>
 				<p class="contact__text">A fancy contact form is currently in development. In the meantime, please send me an email at will.r.warner@gmail.com!
 				</p>
+
+				<form class="contact__form" formaction="email.js">
+					<input class="contact__name" id="js-contact__name" type="text" name="name" placeholder="Name">
+					<input class="contact__email" id="js-contact__email" type="email" name="email" placeholder="Email">
+					<textarea class="contact__textarea" id="js-contact__textarea" name="message" id="" cols="30" rows="10" placeholder="Message..."></textarea>
+				</form>
+				<button class="contact__button" id="js-contact__button">Submit</button>
+
 			</section>
 
 		</main>
 
 		<script src="etch-a-sketch.js"></script>
 		<script src="snake.js"></script>
+		<script src="https://smtpjs.com/v3/smtp.js"></script>
 
 	</body>
 </html>
