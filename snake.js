@@ -18,11 +18,11 @@ var isScrollingEnabled = true;
 var canvasWidth = 0;
 
 var keyMap = {
+  17: 'ctrl',
   39: 'right',
   37: 'left',
   38: 'up',
-  40: 'down',
-  32: 'spacebar'
+  40: 'down'
 }
 
 var snake = {
@@ -41,7 +41,7 @@ var pressedKeys = {
   right: false,
   up: false,
   down: false,
-  spacebar: false
+  ctrl: false
 }
 
 //Event Listeners
@@ -73,7 +73,7 @@ function gameLoop(timestamp) {
       ctx.fillText("GAME OVER", canvasWidth/2, CANVAS_HEIGHT/2);
       ctx.textAlign = "center";
       ctx.font = "12px Arial";
-      ctx.fillText("PRESS SPACEBAR TO START NEW GAME", canvasWidth/2, CANVAS_HEIGHT/2+20);
+      ctx.fillText("PRESS CTRL TO START NEW GAME", canvasWidth/2, CANVAS_HEIGHT/2+20);
 		
     } else {
       ctx.clearRect(0, 0, canvasWidth, CANVAS_HEIGHT);    
@@ -210,7 +210,7 @@ function keydown(event) {
   var key = keyMap[event.keyCode];
   pressedKeys[key] = true;
 	
-  if (pressedKeys.spacebar === true && running === false) {
+  if (pressedKeys.ctrl === true && running === false) {
     event.preventDefault();	//Prevent page from scrolling to bottom
 	  start();
   }
@@ -224,8 +224,7 @@ function keyup(event) {
 
 function arrowKeyScrollingDisabled(e) {
   switch(e.keyCode){
-    case 37: case 39: case 38:  case 40: // Arrow keys
-    case 32: e.preventDefault(); break; // Space
+    case 37: case 39: case 38:  case 40: e.preventDefault(); break; // Arrow keys
     default: break; // do not block other keys
   }
 }
@@ -237,7 +236,7 @@ function  drawStartText() {
   ctx.font = "24px Arial";
   ctx.fillText("LET'S PLAY SNAKE!!", canvasWidth/2, CANVAS_HEIGHT/2);
   ctx.font = "12px Arial";
-  ctx.fillText("PRESS THE SPACEBAR TO START GAME", canvasWidth/2, CANVAS_HEIGHT/2+40);
+  ctx.fillText("PRESS CTRL TO START GAME", canvasWidth/2, CANVAS_HEIGHT/2+40);
   ctx.fillText("USE THE ARROW KEYS TO MOVE THE SNAKE", canvasWidth/2, CANVAS_HEIGHT/2+60);
 }
 
