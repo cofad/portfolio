@@ -75,7 +75,7 @@ function sendEmail() {
         document.getElementById("js-contact__status-sender").style.display =
           "Block";
         document.getElementById("js-contact__status-sender").textContent =
-          "A copy of the message was sent to" + contactEmail + "!";
+          "A copy of the message was sent to " + contactEmail + "!";
       } else {
         document.getElementById("js-contact__status-sender").style.display =
           "Block";
