@@ -264,7 +264,6 @@ function setCanvasDimensions() {
     ) * 20;
   canvas.width = canvasWidth;
   canvas.height = CANVAS_HEIGHT;
-  console.log(canvasWidth);
 }
 
 function windowResize() {
