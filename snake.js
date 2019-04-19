@@ -3,6 +3,7 @@
 /*snake.js*/
 
 const CANVAS_HEIGHT = 200;
+const MAX_CANVAS_WIDTH = 600;
 const MAX_FPS = 20;
 
 //Initialization
@@ -262,6 +263,10 @@ function setCanvasDimensions() {
     Math.round(
       (document.getElementById("js-snake__container").offsetWidth - 40) / 20
     ) * 20;
+
+  if (canvasWidth > MAX_CANVAS_WIDTH) {
+    canvasWidth = MAX_CANVAS_WIDTH;
+  }
   canvas.width = canvasWidth;
   canvas.height = CANVAS_HEIGHT;
 }
