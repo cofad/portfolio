@@ -13,17 +13,14 @@ function sendEmail() {
   var contactEmail = document.getElementById("js-contact__email").value;
   var contactMessage = document.getElementById("js-contact__message").value;
 
-  //Initialize message feedback responses
-  document.getElementById("js-contact__status").style.display = "Block";
-  document.getElementById("js-contact__status").textContent =
-    "Sending Message.....";
-
   document.getElementById("js-contact__status-receiver").style.display =
     "Block";
-  document.getElementById("js-contact__status-receiver").textContent = "";
+  document.getElementById("js-contact__status-receiver").textContent =
+    "Sending message to William Warner ...";
 
   document.getElementById("js-contact__status-sender").style.display = "Block";
-  document.getElementById("js-contact__status-sender").textContent = "";
+  document.getElementById("js-contact__status-sender").textContent =
+    "Sending message to You ...";
 
   clearContactForm();
 
@@ -58,10 +55,6 @@ function sendEmail() {
         "Block";
       document.getElementById("js-contact__status-receiver").textContent =
         "I'm sorry but there was an error submitting your message. Please send me an email at will.r.warner@gmail.com";
-
-      //Clear the messsage sending status
-      document.getElementById("js-contact__status").textContent = "";
-      document.getElementById("js-contact__status").style.display = "None";
     }
   });
 
@@ -86,10 +79,6 @@ function sendEmail() {
         "Block";
       document.getElementById("js-contact__status-sender").textContent =
         "I'm sorry but there was an error submitting a copy of the message to your inbox.";
-
-      //Clear the messsage sending status
-      document.getElementById("js-contact__status").textContent = "";
-      document.getElementById("js-contact__status").style.display = "None";
     }
   });
 }
