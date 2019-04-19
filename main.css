@@ -417,6 +417,18 @@
   margin-top: 5px;
 }
 
+.contact__status-sender {
+  display: none;
+
+  margin: 0 0 25px 0;
+}
+
+.contact__status-sender {
+  display: none;
+
+  margin: 0 0 25px 0;
+}
+
 .contact__status {
   display: none;
 
