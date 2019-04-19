@@ -79,7 +79,7 @@ function sendEmail() {
         document.getElementById("js-contact__status-sender").style.display =
           "Block";
         document.getElementById("js-contact__status-sender").textContent =
-          "A copy of the message was sent to the email adress you entered!";
+          "A copy of the message was sent to" + contactEmail + "!";
 
         //Clear the messsage sending status
         document.getElementById("js-contact__status").textContent = "";
