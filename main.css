@@ -345,6 +345,14 @@
   padding: 20px;
 }
 
+.contact__status-receiver {
+  padding: 0 20px;
+}
+
+.contact__status-sender {
+  padding: 0 20px;
+}
+
 /*---------------------------------*/
 /*----------Etch-A-Sketch----------*/
 /*---------------------------------*/
