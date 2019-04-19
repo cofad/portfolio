@@ -191,6 +191,23 @@
   margin: 10px 0px 10px 0;
 }
 
+.about-card__skill-container {
+  display: flex;
+  align-items: center;
+
+  margin-top: 10px;
+}
+
+.about-card__skill-logo {
+  width: 75px;
+}
+
+.about-card__skill-list-item {
+  margin-left: 20px;
+
+  list-style-type: square;
+}
+
 /*----------------------------*/
 /*----------Projects----------*/
 /*----------------------------*/
