@@ -83,8 +83,8 @@
 }
 
 .hero__image {
-  height: 40vh;
-  max-height: 300px;
+  width: 40vw;
+  max-width: 300px;
 
   margin: 15vh 0 5vh 0;
 }
