@@ -70,8 +70,9 @@
 
   height: 100vh;
 
-  background: url("img/khara-woods-510726-unsplash-min.jpg") center center;
+  background: url("img/khara-woods-510726-unsplash-min.jpg");
   background-size: cover;
+  background-position: center;
 }
 
 .hero__body {
@@ -467,6 +468,13 @@
 /*----------Media Queries----------*/
 /*---------------------------------*/
 /*Media Queries */
+
+@media only screen and (max-width: 400px) {
+  .hero {
+    background-position: unset;
+  }
+}
+
 @media only screen and (min-width: 800px) {
   .hero__body {
     flex-direction: row;
