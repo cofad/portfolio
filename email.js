@@ -56,10 +56,6 @@ function sendEmail() {
           "Block";
         document.getElementById("js-contact__status-receiver").textContent =
           "Thank you for contacting me. Your message has been submitted successfully!";
-
-        //Clear the messsage sending status
-        document.getElementById("js-contact__status").textContent = "";
-        document.getElementById("js-contact__status").style.display = "None";
       } else {
         document.getElementById("js-contact__status-receiver").style.display =
           "Block";
@@ -80,10 +76,6 @@ function sendEmail() {
           "Block";
         document.getElementById("js-contact__status-sender").textContent =
           "A copy of the message was sent to" + contactEmail + "!";
-
-        //Clear the messsage sending status
-        document.getElementById("js-contact__status").textContent = "";
-        document.getElementById("js-contact__status").style.display = "None";
       } else {
         document.getElementById("js-contact__status-sender").style.display =
           "Block";
