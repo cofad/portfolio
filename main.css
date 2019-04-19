@@ -82,9 +82,10 @@
 }
 
 .hero__image {
-  width: 300px;
+  width: 60vw;
+  max-width: 300px;
 
-  margin: 160px 0 40px 0;
+  margin: 15vh 0 5vh 0;
 }
 
 .hero__logo {
