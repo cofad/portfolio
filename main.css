@@ -91,6 +91,22 @@
 .hero__logo {
   width: 120px;
   height: 120px;
+
+  animation-name: hero__logo-animation;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes hero__logo-animation {
+  0% {
+    transform: scale(0.75);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.75);
+  }
 }
 
 .hero__title-container {
