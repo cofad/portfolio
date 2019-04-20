@@ -149,6 +149,9 @@
   border-bottom: 2px solid;
   padding: 5px;
   margin-bottom: 10px;
+
+  font-family: "Caveat", cursive;
+  font-size: 36px;
 }
 
 .section--dark-grey {
@@ -193,8 +196,6 @@
 
 .about-card__text {
   margin: 10px 0px 10px 0;
-
-  text-align: justify;
 }
 
 .about-card__image {
@@ -267,6 +268,7 @@
   margin: 10px;
   padding: 10px;
 }
+
 .project-card__image {
   width: 100%;
 }
@@ -284,8 +286,6 @@
 
 .project-card__text {
   margin: 10px 0px 10px 0;
-
-  text-align: justify;
 }
 
 .project-card__links {
@@ -474,6 +474,18 @@
 @media only screen and (max-width: 400px) {
   .hero {
     background-position: unset;
+  }
+
+  .contact__status-sender {
+    font-size: 14px;
+  }
+
+  .contact__status-receiver {
+    font-size: 14px;
+  }
+
+  .contact__status {
+    font-size: 14px;
   }
 }
 
