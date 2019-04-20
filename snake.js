@@ -45,17 +45,16 @@ var pressedKeys = {
   ctrl: false
 };
 
-//Event Listeners
-window.addEventListener("keydown", keydown, false);
-window.addEventListener("keyup", keyup, false);
-window.addEventListener("resize", windowResize);
-
-//Main Program
 var canvas = document.getElementById("js-snake__canvas");
 var ctx = canvas.getContext("2d");
 
 setCanvasDimensions();
 drawStartText();
+
+//Event Listeners
+window.addEventListener("keydown", keydown, false);
+window.addEventListener("keyup", keyup, false);
+window.addEventListener("resize", windowResize);
 
 //Game Loop Function
 function gameLoop(timestamp) {
