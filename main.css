@@ -84,7 +84,8 @@
 
 .hero__image {
   width: 40vw;
-  max-width: 300px;
+  max-width: 350px;
+  max-height: 350px;
 
   margin: 15vh 0 5vh 0;
 }
