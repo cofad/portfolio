@@ -1,0 +1,16 @@
+{
+  "name": "willrwarner.com",
+  "version": "2.0.0",
+  "description": "Will R. Warner's Portfolio site",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cofad/willrwarner.com.git"
+  },
+  "author": "Will R. Warner",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cofad/willrwarner.com/issues"
+  },
+  "homepage": "https://cofad.github.io/willrwarner.com/"
+}

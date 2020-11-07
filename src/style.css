@@ -1,0 +1,83 @@
+div,
+img {
+  margin-bottom: 1rem;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: "consolas", monospace;
+  margin: 2rem;
+}
+
+main {
+  max-width: 80ch;
+}
+
+a {
+  color: white;
+  text-decoration: underline white;
+}
+
+a:hover {
+  color: yellow;
+  text-decoration: underline yellow;
+}
+
+.header {
+  margin-bottom: 1rem;
+}
+
+.nav-links {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  list-style: none;
+}
+
+.nav-link-active {
+  font-weight: bold;
+}
+
+.nav-link-anchor {
+  color: white;
+}
+
+.nav-link:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.headshot {
+  width: 50vw;
+  min-width: 10rem;
+  max-width: 20rem;
+  height: 40vw;
+  min-height: calc(4 / 5 * 10rem);
+  max-height: calc(4 / 5 * 20rem);
+  object-fit: cover;
+  object-position: top;
+  border-radius: 0.5rem;
+}
+
+li {
+  list-style-type: ">";
+  padding-left: 0.5rem;
+}
+
+.font-weight-bold {
+  font-weight: bold;
+}
+
+.resume-anchor {
+  display: flex;
+  align-items: center;
+}
+
+.resume-anchor-img {
+  height: 30px;
+  margin: 0;
+  padding-right: 1rem;
+}
