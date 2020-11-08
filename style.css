@@ -50,6 +50,8 @@ li {
 
 .nav-link {
   list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
 }
 
 .nav-link-active {
