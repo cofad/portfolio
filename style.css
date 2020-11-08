@@ -24,6 +24,16 @@ a:hover {
   text-decoration: underline yellow;
 }
 
+ul {
+  padding-left: 1rem;
+}
+
+li {
+  list-style-type: ">";
+  padding-left: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .header {
   margin-bottom: 1rem;
 }
@@ -60,11 +70,6 @@ a:hover {
   object-fit: cover;
   object-position: top;
   border-radius: 0.5rem;
-}
-
-li {
-  list-style-type: ">";
-  padding-left: 0.5rem;
 }
 
 .font-weight-bold {
