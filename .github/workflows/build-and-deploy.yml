@@ -15,16 +15,28 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Install
+      - name: Install Node Modules
         run: |
           cd front-end
           npm ci
+          cd ../resume
+          npm ci
 
-      - name: Build
+      - name: Build Front-End
         run: |
           cd front-end
           npm run build
-          cp -r dist/front-end/browser ../public
+
+      - name: Build Resume
+        run: |
+          cd resume
+          npm run build
+
+      - name: Copy Files to Public Directory
+        run: |
+          mkdir public
+          cp -r front-end/dist/front-end/browser ./public
+          cp resume/resume-* ./public
 
       - name: Deploy to GH Pages
         uses: peaceiris/actions-gh-pages@v3
