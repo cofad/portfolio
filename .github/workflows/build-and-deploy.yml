@@ -1,4 +1,4 @@
-name: Build and Deploy to GH Pages 
+name: Build and Deploy to GH Pages
 
 on:
   push:
@@ -16,7 +16,7 @@ jobs:
           persist-credentials: false
 
       - name: Install
-        run: | 
+        run: |
           cd front-end
           npm ci
 
@@ -31,3 +31,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: public
+          cname: willrwarner.dev
