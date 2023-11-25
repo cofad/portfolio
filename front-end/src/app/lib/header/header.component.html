@@ -1,0 +1,18 @@
+<header class="header">
+  <h1>willrwarner.dev</h1>
+
+  <nav>
+    <ul class="nav-links">
+      <li *ngFor="let route of routes" class="nav-link">
+        <a
+          class="nav-link-anchor"
+          [routerLink]="route.path"
+          [routerLinkActive]="'nav-link-active'"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          {{ route.title }}
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
