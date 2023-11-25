@@ -34,7 +34,6 @@ jobs:
 
       - name: Copy Files to Public Directory
         run: |
-          mkdir public
           cp -r front-end/dist/front-end/browser ./public
           cp resume/resume-* ./public
 
