@@ -13,7 +13,8 @@
 				"redhat.vscode-yaml",
 				"github.vscode-github-actions",
 				"dbaeumer.vscode-eslint",
-				"eamodio.gitlens"
+				"eamodio.gitlens",
+				"mathematic.vscode-pdf"
 			]
 		}
 	},
@@ -25,7 +26,7 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "npm install -g @angular/cli"
+	"postCreateCommand": "npm install -g @angular/cli && sudo apt-get install texlive-latex-base && sudo apt-get install texlive-fonts-recommended && sudo apt-get install texlive-fonts-extra && sudo apt-get install texlive-latex-extra"
 
 	// Configure tool-specific properties.
 	// "customizations": {},
