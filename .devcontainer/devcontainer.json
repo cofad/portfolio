@@ -8,7 +8,12 @@
 		"vscode": {
 			"extensions": [
 				"Angular.ng-template",
-				"esbenp.prettier-vscode"
+				"esbenp.prettier-vscode",
+				"vscodevim.vim",
+				"redhat.vscode-yaml",
+				"github.vscode-github-actions",
+				"dbaeumer.vscode-eslint",
+				"eamodio.gitlens"
 			]
 		}
 	},
