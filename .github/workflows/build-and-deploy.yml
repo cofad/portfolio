@@ -24,6 +24,7 @@ jobs:
         run: |
           cd front-end
           npm run build
+          cp dist/front-end/browser ../public
 
       - name: Deploy to GH Pages
         uses: peaceiris/actions-gh-pages@v3
