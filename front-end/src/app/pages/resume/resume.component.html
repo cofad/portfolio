@@ -2,9 +2,9 @@
   <section>
     <h2>Download PDF Resume</h2>
 
-    <a class="resume-anchor" href="https://cofad-resume-api.fly.dev/latest">
+    <a class="resume-anchor" [href]="resumeFileUrl">
       <img class="resume-anchor-img" src="assets/img/pdf-icon.png" alt="" height="30" width="25" />
-      <span class="resume-anchor-text">will-warner-resume.pdf</span>
+      <span class="resume-anchor-text">{{ resumeFileName }}</span>
     </a>
   </section>
 

@@ -13,7 +13,7 @@ import fs from "node:fs";
   const page = await browser.newPage();
   await page.goto(`file://${process.cwd()}/src/resume.html`);
   await page.pdf({
-    path: `resume-${packageJson.version}.pdf`,
+    path: `will-warner-resume-${packageJson.version}.pdf`,
     format: "letter",
   });
 
