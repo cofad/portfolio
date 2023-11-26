@@ -35,7 +35,7 @@ jobs:
       - name: Copy Files to Public Directory
         run: |
           cp -r front-end/dist/front-end/browser ./public
-          cp resume/resume-* ./public/assets
+          cp resume/will-warner-resume-* ./public/assets
 
       - name: Deploy to GH Pages
         uses: peaceiris/actions-gh-pages@v3
