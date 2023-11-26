@@ -27,7 +27,7 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "npm install -g @angular/cli && sudo apt-get install texlive-latex-base && sudo apt-get install texlive-fonts-recommended && sudo apt-get install texlive-fonts-extra && sudo apt-get install texlive-latex-extra"
+	"postCreateCommand": "npm install -g @angular/cli && cd front-end && npm ci && cd ../resume && npm ci"
 
 	// Configure tool-specific properties.
 	// "customizations": {},
