@@ -19,23 +19,15 @@ jobs:
         run: |
           cd front-end
           npm ci
-          cd ../resume
-          npm ci
 
       - name: Build Front-End
         run: |
           cd front-end
           npm run build
 
-      - name: Build Resume
-        run: |
-          cd resume
-          npm run build
-
       - name: Copy Files to Public Directory
         run: |
           cp -r front-end/dist/front-end/browser ./public
-          cp resume/will-warner-resume-* ./public/assets
 
       - name: Deploy to GH Pages
         uses: peaceiris/actions-gh-pages@v3
