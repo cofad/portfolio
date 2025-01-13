@@ -13,10 +13,5 @@ export const routes: Routes = [
         path: 'portfolio',
         component: PortfolioComponent,
         title: 'Portfolio',
-    },
-    {
-        path: 'resume',
-        component: ResumeComponent,
-        title: 'Resume',
-    },
+    }
 ];
