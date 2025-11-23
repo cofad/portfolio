@@ -1,0 +1,37 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: monospace;
+  margin: 2rem;
+  font-size: 16px;
+}
+
+main {
+  margin-inline: auto;
+  max-width: 80ch;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+.headshot {
+  width: 50vw;
+  min-width: 10rem;
+  max-width: 20rem;
+  height: 40vw;
+  min-height: calc(4 / 5 * 10rem);
+  max-height: calc(4 / 5 * 20rem);
+  object-fit: cover;
+  object-position: top;
+  border-radius: 0.5rem;
+}
+
+.contact-links {
+  li {
+    a {
+      color: white;
+      text-decoration: underline;
+    }
+  }
+}
