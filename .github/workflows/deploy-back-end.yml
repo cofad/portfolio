@@ -19,16 +19,16 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install flyctl
+      - name: Install fly
         run: |
           curl -L https://fly.io/install.sh | sh
-          # echo "$HOME/.fly/bin" >> $GITHUB_PATH
+          echo "$HOME/.fly/bin" >> $GITHUB_PATH
 
-      - name: Verify flyctl
-        run: flyctl version
+      - name: Verify fly
+        run: fly version
 
       - name: Run fly launch for back-end
         run: |
           cd back-end
           fly deploy
-          # flyctl launch --name "${FLY_APP_NAME}" --region "${FLY_REGION}" --copy-config --config fly.toml --yes || true
+          # fly launch --name "${FLY_APP_NAME}" --region "${FLY_REGION}" --copy-config --config fly.toml --yes || true
