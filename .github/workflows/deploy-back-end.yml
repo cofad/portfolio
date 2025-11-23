@@ -1,7 +1,9 @@
-name: Fly Launch Back-end
+name: Deploy Back-end
 
 on:
   push:
+    branches:
+      - main
     paths:
       - "back-end/**"
   workflow_dispatch:
