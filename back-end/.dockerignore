@@ -1,0 +1,10 @@
+# Ignore build artifacts and local files
+
+target
+.idea
+_.iml
+.git
+.gitignore
+node_modules
+.DS_Store
+_.log
