@@ -16,5 +16,9 @@ RUN mvn -B -DskipTests package
 FROM eclipse-temurin:17-jre
 WORKDIR /app
 COPY --from=builder /workspace/target/*.jar app.jar
+
+# Ensure a data directory exists for SQLite file. Fly will mount a persistent volume at /data.
+RUN mkdir -p /data
+
 EXPOSE 8080
 ENTRYPOINT ["java","-jar","/app/app.jar"]
