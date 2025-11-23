@@ -1,0 +1,32 @@
+name: Fly Launch Back-end
+
+on:
+  push:
+    paths:
+      - "back-end/**"
+  workflow_dispatch:
+
+jobs:
+  deploy-backend:
+    name: Deploy back-end to Fly.io
+    runs-on: ubuntu-latest
+    env:
+      FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+      FLY_APP_NAME: will-warner-portfolio
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install flyctl
+        run: |
+          curl -L https://fly.io/install.sh | sh
+          # echo "$HOME/.fly/bin" >> $GITHUB_PATH
+
+      - name: Verify flyctl
+        run: flyctl version
+
+      - name: Run fly launch for back-end
+        run: |
+          cd back-end
+          fly deploy
+          # flyctl launch --name "${FLY_APP_NAME}" --region "${FLY_REGION}" --copy-config --config fly.toml --yes || true
