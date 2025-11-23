@@ -8,6 +8,6 @@ public class GreetingController {
 
     @GetMapping("/greeting")
     public String greeting() {
-        return "Hello from the portfolio backend!";
+        return "Hello from the portfolio backend with updates!";
     }
 }
