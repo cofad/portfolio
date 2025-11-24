@@ -1,6 +1,6 @@
--- Simple example table created on app startup
+-- DROP TABLE visits;
+
 CREATE TABLE IF NOT EXISTS visits (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
-  ip VARCHAR(64),
   visited_at DATETIME DEFAULT CURRENT_TIMESTAMP
 );
