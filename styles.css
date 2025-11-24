@@ -11,8 +11,34 @@ main {
   max-width: 80ch;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
 li {
   margin-bottom: 0.5rem;
+}
+
+.button {
+  padding: 8px 12px;
+  background-color: black;
+  border: 2px solid white;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+  border-radius: 999px;
+
+  &:focus:not([disabled]),
+  &:hover:not([disabled]) {
+    outline: 2px solid white;
+    outline-offset: 3px;
+  }
+
+  &[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
 }
 
 .headshot {

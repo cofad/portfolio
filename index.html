@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/styles.css" />
     <title>Home | will-warner.dev</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="index.js" defer></script>
 
     <link
       rel="apple-touch-icon"
@@ -38,6 +39,19 @@
         work in progress but will be continuously updated. Please check back for
         new content!
       </p>
+
+      <div
+        style="
+          display: flex;
+          gap: 8px;
+          margin-bottom: 16px;
+          flex-direction: column;
+          align-items: flex-start;
+        "
+      >
+        <button id="add-your-visit" class="button">Add your visit</button>
+        <div role="alert" id="add-your-visit-response"></div>
+      </div>
 
       <img class="headshot" src="assets/images/headshot-angled.webp" alt="" />
 
