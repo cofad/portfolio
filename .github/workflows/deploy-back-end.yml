@@ -30,5 +30,4 @@ jobs:
       - name: Run fly launch for back-end
         run: |
           cd back-end
-          fly deploy
-          # fly launch --name "${FLY_APP_NAME}" --region "${FLY_REGION}" --copy-config --config fly.toml --yes || true
+          fly deploy --ha=false
