@@ -21,7 +21,10 @@
         "esbenp.prettier-vscode",
         "vscjava.vscode-java-pack",
         "streetsidesoftware.code-spell-checker",
-        "github.vscode-github-actions"
+        "github.vscode-github-actions",
+        "vmware.vscode-spring-boot",
+        "vscjava.vscode-spring-initializr",
+        "vscjava.vscode-spring-boot-dashboard"
       ]
     }
   }
