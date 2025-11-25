@@ -24,7 +24,8 @@
         "github.vscode-github-actions",
         "vmware.vscode-spring-boot",
         "vscjava.vscode-spring-initializr",
-        "vscjava.vscode-spring-boot-dashboard"
+        "vscjava.vscode-spring-boot-dashboard",
+        "ritwickdey.LiveServer"
       ]
     }
   }
