@@ -25,7 +25,9 @@
         "vmware.vscode-spring-boot",
         "vscjava.vscode-spring-initializr",
         "vscjava.vscode-spring-boot-dashboard",
-        "ritwickdey.LiveServer"
+        "ritwickdey.LiveServer",
+        "eamodio.gitlens",
+        "vscodevim.vim"
       ]
     }
   }
